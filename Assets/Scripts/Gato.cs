@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class Gato : MonoBehaviour
 {
     // Start is called before the first frame update
+    public Button nextButton;
 
     private List<string> ordemCorreta = new List<string> {
         "GA",
@@ -16,7 +17,7 @@ public class Gato : MonoBehaviour
 
     void Start()
     {
-
+        nextButton.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -76,7 +77,7 @@ public class Gato : MonoBehaviour
             ordemCorreta.Remove("TO");
             //Apresentar para trocar de nivel
 
-
+            nextButton.gameObject.SetActive(true);
         }
         else
         {
