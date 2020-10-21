@@ -10,6 +10,11 @@ public class Gato : MonoBehaviour
     // Start is called before the first frame update
     public Button nextButton;
 
+    public GameObject audioGA;
+    public GameObject audioTO;
+    public GameObject audioGATO;
+
+
     private List<string> ordemCorreta = new List<string> {
         "GA",
         "TO"
@@ -30,6 +35,9 @@ public class Gato : MonoBehaviour
 
     public void Ga(Button button)
     {
+        //implementar audio AQUI do GA
+
+
         if (ordemCorreta.First() == "GA")
         {
             var colors = button.colors;
@@ -62,6 +70,9 @@ public class Gato : MonoBehaviour
 
     public void To(Button button)
     {
+        //implementar audio AQUI do TO
+
+
         Debug.Log("cliquei no TO!!!");
 
         if (ordemCorreta.First() == "TO")
@@ -75,7 +86,7 @@ public class Gato : MonoBehaviour
             button.colors = colors;
 
             ordemCorreta.Remove("TO");
-            //Apresentar para trocar de nivel
+            //TODO - Emitir a palavra inteira
 
             nextButton.gameObject.SetActive(true);
         }
