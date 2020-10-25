@@ -14,6 +14,7 @@ public class Gato : MonoBehaviour
     public GameObject audioTO;
     public GameObject audioGATO;
 
+    public string level2;
 
     private List<string> ordemCorreta = new List<string> {
         "GA",
@@ -112,6 +113,6 @@ public class Gato : MonoBehaviour
 
     public void NextLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(level2);
     }
 }

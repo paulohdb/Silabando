@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class SwitchLevels : MonoBehaviour
 {
+
+    public string level1;
     public void playGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(level1);
     }
 }
