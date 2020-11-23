@@ -12,4 +12,9 @@ public class SwitchLevels : MonoBehaviour
     {
         SceneManager.LoadScene(level1);
     }
+
+    public void ChangeLevel(string levelname)
+    {
+        SceneManager.LoadScene(levelname);
+    }
 }
