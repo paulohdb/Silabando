@@ -43,7 +43,7 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 11
+  serializedVersion: 12
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -98,7 +98,8 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 3f16f3ba536248b40b11cb325dc96fb0,
+    type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -118,6 +119,8 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
@@ -159,6 +162,11 @@ PrefabInstance:
       propertyPath: m_Text
       value: Ma
       objectReference: {fileID: 0}
+    - target: {fileID: 4508404431469947200, guid: 80badb4071d141641af17317ae3da530,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 8300000, guid: 97a682b59286316469d190b4b603c909, type: 3}
     - target: {fileID: 4508404431526886124, guid: 80badb4071d141641af17317ae3da530,
         type: 3}
       propertyPath: m_Name
@@ -219,6 +227,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4508404431577998182, guid: 80badb4071d141641af17317ae3da530,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2100000, guid: a68fc167d467baa4b95c5c638303eecd, type: 2}
     - target: {fileID: 4508404431641124246, guid: 80badb4071d141641af17317ae3da530,
         type: 3}
       propertyPath: m_LocalPosition.z
