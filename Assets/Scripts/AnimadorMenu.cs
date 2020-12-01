@@ -11,6 +11,7 @@ public class AnimadorMenu : MonoBehaviour
     public LeanTweenType easeIn, easeOut;
     public float moveTime = 1f;
     private LTSeq seq;
+    private bool isDone;
 
     void Start()
     {
@@ -24,7 +25,7 @@ public class AnimadorMenu : MonoBehaviour
     {
         //seq = LeanTween.sequence();
 
-        if (seq is null)
+        if (seq is null || isDone)
             return;
 
         foreach (GameObject objeto in objetosParaAnimar)
@@ -38,9 +39,5 @@ public class AnimadorMenu : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    private void OnDisable() => isDone = true;
 }
