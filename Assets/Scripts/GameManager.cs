@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
 {
 
     public List<GameObject> ordemCorreta;
+    private List<GameObject> botoesPassados = new List<GameObject>();
     public static GameManager Instance;
     public GameObject imagemGanhou;
     public Text silabasText;
@@ -51,7 +52,7 @@ public class GameManager : MonoBehaviour
         var button = buttonGameObject.GetComponent<Button>();
         var colors = button.colors;
 
-        if (ordemCorreta.First().Equals(buttonGameObject))
+        if (ordemCorreta.First().Equals(buttonGameObject) || ordemCorreta.First().GetComponent<Button>().GetComponentInChildren<Text>().text.Equals(button.GetComponentInChildren<Text>().text))
         {
             
             colors.normalColor = Color.green;
@@ -61,12 +62,18 @@ public class GameManager : MonoBehaviour
             colors.disabledColor = Color.green;
             button.colors = colors;
             button.interactable = false;
+            botoesPassados.Add(ordemCorreta.First());
             ordemCorreta.RemoveAt(0);
             ganhou = ordemCorreta.Count == 0;
             addSilaba(button.GetComponentInChildren<Text>().text);
 
-            if (imagemGanhou != null)
+            if (ganhou && imagemGanhou != null) 
+            {
                 imagemGanhou.SetActive(ganhou);
+                foreach(Button butao in FindObjectsOfType<Button>())
+                    butao.gameObject.SetActive(false);
+            }
+                
         }
 
         else
